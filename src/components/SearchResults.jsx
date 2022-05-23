@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaExclamationCircle } from "react-icons/fa";
+import { FaExclamationCircle, FaThumbsUp } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 
@@ -97,7 +97,12 @@ const SearchResults = () => {
                 <div>
                   <h4 className=" italic text-slate-400">Example:</h4>
                   <p> {def.example && def.example}</p>
-                  <p> {def.thumbs_up && def.thumbs_up}</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <h4 className="text-slate-400">
+                    <FaThumbsUp />
+                  </h4>
+                  <p>{def.thumbs_up && def.thumbs_up}</p>
                 </div>
               </div>
             ))
